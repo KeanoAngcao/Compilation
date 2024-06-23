@@ -1,0 +1,96 @@
+		<button onclick="MainPage)">Main Page</button> 
+ <script>
+           // Define an array to hold the available items and their quantities
+    let availableItems = [
+        { name: 'Dark Blue Jeans', price: 390, quantity: 20 },
+        { name: 'Khaki Pants', price: 395, quantity: 20 },
+        { name: 'Light Blue Jeans', price: 345, quantity: 20 },
+		{ name: 'Black Jeans', price: 395, quantity: 20 },
+		{ name: 'Brown Jeans', price: 350, quantity: 20 },
+		{ name: 'Perfume 1', price: 200, quantity: 20 },
+		{ name: 'Perfume 2', price: 200, quantity: 20 },
+		{ name: 'Perfume 3', price: 250, quantity: 20 },
+		{ name: 'Perfume 4', price: 270, quantity: 20 },
+		{ name: 'Perfume 5', price: 250, quantity: 20 },
+		{ name: 'Sando 1', price: 120, quantity: 20 },
+		{ name: 'Sando 2', price: 220, quantity: 20 },
+		{ name: 'Sando 3', price: 130, quantity: 20 },
+		{ name: 'Sando 4', price: 140, quantity: 20 },
+		{ name: 'Sando 5', price: 520, quantity: 20 },
+		{ name: 'Toys 1', price: 720, quantity: 20 },
+		{ name: 'Toys 2', price: 220, quantity: 20 },
+		{ name: 'Toys 3', price: 1020, quantity: 20 },
+		{ name: 'Toys 4', price: 1720, quantity: 20 },
+		{ name: 'Toys 5', price: 1720, quantity: 20 },
+		{ name: 'Tshirt 1', price: 720, quantity: 20 },
+		{ name: 'Tshirt 2', price: 1000, quantity: 20 },
+		{ name: 'Tshirt 3', price: 999, quantity: 20 },
+		{ name: 'Tshirt 4', price: 220, quantity: 20 },
+		{ name: 'Tshirt 5', price: 210, quantity: 20 },
+        // Add more items with their prices and initial quantities
+    ];
+
+    let cartItems = [];
+
+    function AddtoCart(itemName, price) {
+        // Find the item in the availableItems array
+        let item = availableItems.find(i => i.name === itemName);
+        // Check if the item is available and has quantity > 0
+        if (item && item.quantity > 0) {
+            cartItems.push({ name: itemName, price });
+            // Reduce the quantity of the item in stock
+            item.quantity--;
+            updateCart();
+        } else {
+            alert('Item is out of stock!');
+        }
+    }
+
+	function restockItem(itemName, quantity) {
+    let item = availableItems.find(i => i.name === itemName);
+    if (item) {
+        item.quantity += quantity; // Increase the quantity of the item
+        updateStock(itemName, item.quantity); // Update the displayed stock
+    } else {
+        // Add the item to the availableItems if it doesn't exist
+        availableItems.push({ name: itemName, price: 0, quantity });
+        updateStock(itemName, quantity); // Update the displayed stock
+    }
+}
+
+    function updateCart() {
+        let cartList = document.getElementById('cart-items');
+        cartList.innerHTML = '';
+        cartItems.forEach(cartItem => {
+            let li = document.createElement('li');
+            li.textContent = `${cartItem.name} - ${cartItem.price} PHP`;
+            cartList.appendChild(li);
+        });
+    }
+	function updateStock(itemName, quantity) {
+    let itemElement = document.querySelector(`.product-items h5:contains(${itemName})`).parentNode;
+    let stockElement = itemElement.querySelector('.stock');
+    if (stockElement) {
+        stockElement.textContent = `Stock: ${quantity}`;
+    } else {
+        let newStockElement = document.createElement('div');
+        newStockElement.classList.add('stock');
+        newStockElement.textContent = `Stock: ${quantity}`;
+        itemElement.appendChild(newStockElement);
+    }
+}
+		{   
+		function MainPage() { window.location.href = 'a.html';
+		}
+		}
+    function generateReceipt() {
+        let total = cartItems.reduce((acc, curr) => acc + curr.price, 0);
+        let receipt = document.getElementById('receipt');
+        receipt.innerHTML = `<p>Total: ${total} PHP</p>`;
+    }
+
+
+
+	
+
+    </script>

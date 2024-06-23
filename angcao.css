@@ -1,0 +1,27 @@
+p{
+	text-align: center;
+	color: maroon;
+	font-family:"Calibri";
+}
+h1{
+	font-family: "Calibri";
+	color: maroon;
+	font-weight: bolder;
+	text-align: center;
+
+}
+h2{
+	font-family: "Calibri";
+	text-align: center;
+}
+caption{
+	font-family:"Calibri";
+	background-color:maroon;
+	color: white;
+	text-align:center;	
+	font-weight: bold;
+}
+td{
+	font-family:"Calibri";
+	font-size:14px;
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charsets="UTF-8">
+	<meta http-equiv="X-UA-Compatible" contents="IE=edge">
+	<meta name="viewport" contents="width=device-width, initial-scale=scale=1.0">
+	<link rel="stylesheet" href="menu.css">
+	
+</head>
+<body>
+	<div class="menu">
+		<div class="heading">
+			<h1> Papat's Eatery </h1>
+			<h3>&mdash;Menu&mdash;</h3>
+		</div>
+	
+	    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="generateReceipt()">Calculate</button>
+        <div id="receipt"></div>
+    </div>
+		<div class="food-items">
+			<img src="Tinola.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Tinola</h5>
+					<h5 class="price">90.00</h5>
+				</div>
+				<p> Tinola is a classic Filipino food with a fragrant and zingy flavor.</p>
+				<button onclick="AddtoCart('Tinola', 90)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Adobo.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Adobo</h5>
+					<h5 class="price">95.00</h5>
+				</div>
+				<p> Adobo is a braised pork recipe with vinegar, soy sauce and garlic, and is delicious over steamed rice.</p>
+				<button onclick="AddtoCart('Adobo', 95)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Buko Pandan.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Buko Pandan</h5>
+					<h5 class="price">45.00</h5>
+				</div>
+				<p> Buko pandan is a type of Filipino dessert salad, but many people also enjoy it in a sippable drink form.</p>
+				<button onclick="AddtoCart('Buko Pandan', 45)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Sinugang.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sinigang</h5>
+					<h5 class="price">95.00</h5>
+				</div>
+				<p> sinigang is a traditional favorite Filipino food, perfect for warming up on a chilly day.</p>
+				<button onclick="AddtoCart('Sinigang', 95)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Calamansi Juice.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Calamansi Juice</h5>
+					<h5 class="price">50.00</h5>
+				</div>
+				<p> Calamansi juice is a refreshing beverage that can be compared to lemonade or limeade.</p>
+				<button onclick="AddtoCart('Calamnsi Juice', 50)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="dinuguan.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Dinuguan</h5>
+					<h5 class="price">100.00</h5>
+				</div>
+				<p> Dinuguan is a traditional savory stew made with chunks of pork meat or pork offal.</p>
+				<button onclick="AddtoCart('Dinuguan', 100)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Lechon.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Lechon</h5>
+					<h5 class="price">350.00</h5>
+				</div>
+				<p> Lechon is one of the Philippines' most well-known foods whose name translates to “roasted piglet”.</p>
+				<button onclick="AddtoCart('Lechon', 350)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Pancit.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Pancit</h5>
+					<h5 class="price">75.00</h5>
+				</div>
+				<p> Pancit is another broad term for Filipino dishes made with a base of rice noodles.</p>
+				<button onclick="AddtoCart('Pancit', 75)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="pinakbet.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Pinakbet</h5>
+					<h5 class="price">105.00</h5>
+				</div>
+				<p> Pinakbet is a popular Filipino food from the northern Ilocos region.</p>
+				<button onclick="AddtoCart('Pinakbet', 105)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="pork skewers.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Pork Skewers</h5>
+					<h5 class="price">85.00</h5>
+				</div>
+				<p> Skewers are one of the Philippines' most popular street foods, with pork skewers being a huge crowd favorite.</p>
+				<button onclick="AddtoCart('Pork Skewers', 85)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Ube Halaya.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Ube Halaya</h5>
+					<h5 class="price">120.00</h5>
+				</div>
+				<p> Ube halaya is a jam made from mashed purple yam, coconut milk, sweetened condensed milk and sometimes other flavorful ingredients.</p>
+				<button onclick="AddtoCart('Ube Halaya', 120)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Sisig.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sisig</h5>
+					<h5 class="price">150.00</h5>
+				</div>
+				<p>Sisig is a Filipino dish made from pork jowl and ears, pork belly, and chicken liver, which is usually seasoned with calamansi, onions, and chili peppers.</p>
+				<button onclick="AddtoCart('Sisig', 150)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Spaghetti.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Spaghetti</h5>
+					<h5 class="price">200.00</h5>
+				</div>
+				<p>Pinoy Spaghetti is the Filipino version of pasta that is of Italian origin. This version of Spaghetti requires the use of sugar, hotdogs, and banana catsup. </p>
+				<button onclick="AddtoCart('Spaghetti', 200)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Ice Tea.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Ice Tea</h5>
+					<h5 class="price">50.00</h5>
+				</div>
+				<p>Iced tea is a form of cold tea. </p>
+				<button onclick="AddtoCart('Ice Tea', 50)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Cupcake.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Strawberry Cupcake</h5>
+					<h5 class="price">70.00</h5>
+				</div>
+				<p>Strawberry Cupcake is Soft, fluffy, and moist, these fresh Strawberry Cupcakes will melt in your mouth. </p>
+				<button onclick="AddtoCart('Strawberry Cupcake', 70)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Ice Cream.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Ice Cream</h5>
+					<h5 class="price">120.00</h5>
+				</div>
+				<p>Ice cream is a frozen dessert typically made from milk or cream that has been flavoured with a sweetener, either sugar. </p>
+				<button onclick="AddtoCart('Ice Cream', 120)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Steak.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Steak</h5>
+					<h5 class="price">400.00</h5>
+				</div>
+				<p>A steak is a thick cut of meat generally sliced across the muscle fibers, sometimes including a bone. </p>
+				<button onclick="AddtoCart('Steak', 400)"> Add to Cart </button>
+			</div>
+		</div>
+		<div class="food-items">
+			<img src="Bangus.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Fried Bangus</h5>
+					<h5 class="price">110.00</h5>
+				</div>
+				<p>Fried Bangus or Fried milkfish alone has its deliciously rich taste while the marinade gives it a sour spicy flavor. </p>
+				<button onclick="AddtoCart('Fried Bangus', 110)"> Add to Cart </button>
+			</div>
+		</div>
+	</div>
+
+    <script>
+        let cartItems = [];
+
+        function AddtoCart(item, price) {
+            cartItems.push({ item, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            let cartList = document.getElementById('cart-items');
+            cartList.innerHTML = '';
+            cartItems.forEach(cartItem => {
+                let li = document.createElement('li');
+                li.textContent = `${cartItem.item} - ${cartItem.price} PHP`;
+                cartList.appendChild(li);
+            });
+        }
+
+        function generateReceipt() {
+            let total = cartItems.reduce((acc, curr) => acc + curr.price, 0);
+            let receipt = document.getElementById('receipt');
+            receipt.innerHTML = `<p>Total: ${total} PHP</p>`;
+        }
+    </script>
+
+
+
+</body>
+</html>

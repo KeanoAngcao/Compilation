@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charsets="UTF-8">
+	<meta http-equiv="X-UA-Compatible" contents="IE=edge">
+	<meta name="viewport" contents="width=device-width, initial-scale=scale=1.0">
+	<link rel="stylesheet" href="a.css">
+	
+</head>
+<body>
+	<div class="list">
+		<div class="heading">
+			<div class="logo">
+			<img src="logo3.png"></div><h1> NIKEane's Store </h1>
+			<h3>&mdash;Products&mdash;</h3>							
+			<button onclick="ViewStock"> View Stock </button>	
+		</div>
+	
+	    <div id="cart">
+        <h2>Cart</h2>
+        <ul id="cart-items"></ul>
+        <button onclick="generateReceipt()">Calculate</button>
+        <div id="receipt"></div>
+    </div>
+		<div class="product-items">
+			<img src="j1.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Dark Blue Jeans</h5>
+					<h5 class="price">390.00</h5>
+				</div>
+				<button onclick="AddtoCart('Dark Blue Jeans', 390)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Dark Blue Jeans</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="j2.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Khaki Pants</h5>
+					<h5 class="price">395.00</h5>
+				</div>
+				<button onclick="AddtoCart('Khaki Pants', 395)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Khaki Pants</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="j3.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Light Blue Jeans</h5>
+					<h5 class="price">345.00</h5>
+				</div>
+				<button onclick="AddtoCart('Light Blue Jeans', 345)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Light Blue Jeans</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="j4.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Black Jeans</h5>
+					<h5 class="price">395.00</h5>
+				</div>
+				<button onclick="AddtoCart('Black Jeans', 395)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Black Jeans</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="j5.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Brown Pants</h5>
+					<h5 class="price">350.00</h5>
+				</div>
+				<button onclick="AddtoCart('Brown Pants', 350)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Brown Pants</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="p1.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Perfume 1</h5>
+					<h5 class="price">200.00</h5>
+				</div>
+				<button onclick="AddtoCart('Perfume 1', 200)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Perfume 1</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="p2.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Perfume 2</h5>
+					<h5 class="price">200.00</h5>
+				</div>
+				<button onclick="AddtoCart('Perfume 2', 200)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Perfume 2</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="p3.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Perfume 3</h5>
+					<h5 class="price">250.00</h5>
+				</div>
+				<button onclick="AddtoCart('Perfume 3', 250)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Perfume 3</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="p4.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Perfume 4</h5>
+					<h5 class="price">270.00</h5>
+				</div>
+				<button onclick="AddtoCart('Perfume 4', 270)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Perfume 4</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="p5.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Perfume 5</h5>
+					<h5 class="price">250.00</h5>
+				</div>
+				<button onclick="AddtoCart('Perfume 5', 250)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Perfume 5</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="s1.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sando 1</h5>
+					<h5 class="price">120.00</h5>
+				</div>
+				<button onclick="AddtoCart('Sando 1', 120)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Sando 1</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="s2.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sando 2</h5>
+					<h5 class="price">220.00</h5>
+				</div>
+				<button onclick="AddtoCart('Sando 2', 220)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Sando 2</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="s3.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sando 3</h5>
+					<h5 class="price">130.00</h5>
+				</div>
+				<button onclick="AddtoCart('Sando 3', 130)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Sando 3</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="s4.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sando 4</h5>
+					<h5 class="price">140.00</h5>
+				</div>
+				<button onclick="AddtoCart('Sando 4', 140)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Sando 4</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="s5.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Sando 5</h5>
+					<h5 class="price">520.00</h5>
+				</div>
+				<button onclick="AddtoCart('Sando 5', 520)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Sando 5</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="t1.jpg">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Toys 1</h5>
+					<h5 class="price">720.00</h5>
+				</div>
+				<button onclick="AddtoCart('Toys 1', 720)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Toys 1</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="t2.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Toys 2</h5>
+					<h5 class="price">220.00</h5>
+				</div>
+				<button onclick="AddtoCart('Toys 2', 220)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Toys 2</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="t3.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Toys 3</h5>
+					<h5 class="price">1020.00</h5>
+				</div>
+				<button onclick="AddtoCart('Toys 3', 1020)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Toys 3</button>
+			</div>
+		</div>
+		<div class="product-items">
+			<img src="t4.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Toys 4</h5>
+					<h5 class="price">1720.00</h5>
+				</div>
+				<button onclick="AddtoCart('Toys 4', 1720)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Toys 4</button>
+			</div>
+		</div>
+			<div class="product-items">
+			<img src="t5.webp">
+			<div class="details">
+				<div class="details-sub">
+					<h5>Toys 5</h5>
+					<h5 class="price">1720.00</h5>
+				</div>
+				<button onclick="AddtoCart('Toys 5', 120)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Toys 5</button>
+			</div>
+		</div>
+		<div class="product-items">
+		<img src="ts1.webp">
+		<div class="details">
+			<div class="details-sub">
+				<h5>Tshirt 1</h5>
+				<h5 class="price">720.00</h5>
+			</div>
+				<button onclick="AddtoCart('Tshirt 1', 720)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Tshirt 1</button>
+			</div>
+		</div>
+		<div class="product-items">
+		<img src="ts2.webp">
+		<div class="details">
+			<div class="details-sub">
+				<h5>Tshirt 2</h5>
+				<h5 class="price">1000.00</h5>
+			</div>
+				<button onclick="AddtoCart('Tshirt 2', 1000)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Tshirt 2</button>
+			</div>
+		</div>
+		<div class="product-items">
+		<img src="ts3.webp">
+		<div class="details">
+			<div class="details-sub">
+				<h5>Tshirt 3</h5>
+				<h5 class="price">999.00</h5>
+			</div>
+				<button onclick="AddtoCart('Tshirt 3', 1720)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Tshirt 3</button>
+			</div>
+		</div>
+		<div class="product-items">
+		<img src="ts4.webp">
+		<div class="details">
+			<div class="details-sub">
+				<h5>Tshirt 4</h5>
+				<h5 class="price">220.00</h5>
+			</div>
+				<button onclick="AddtoCart('Tshirt 4', 220)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Tshirt 4</button>
+			</div>
+		</div>
+		<div class="product-items">
+		<img src="ts5.webp">
+		<div class="details">
+			<div class="details-sub">
+				<h5>Tshirt 5</h5>
+				<h5 class="price">210.00</h5>
+			</div>
+				<button onclick="AddtoCart('Tshirt 4', 210)"> Add to Cart </button>
+				<button onclick="restockItem('Dark Blue Jeans', 5)">Restock Tshirt 5</button>
+			</div>
+	</div>
+    <script>
+           // Define an array to hold the available items and their quantities
+    let availableItems = [
+        { name: 'Dark Blue Jeans', price: 390, quantity: 20 },
+        { name: 'Khaki Pants', price: 395, quantity: 20 },
+        { name: 'Light Blue Jeans', price: 345, quantity: 20 },
+		{ name: 'Black Jeans', price: 395, quantity: 20 },
+		{ name: 'Brown Jeans', price: 350, quantity: 20 },
+		{ name: 'Perfume 1', price: 200, quantity: 20 },
+		{ name: 'Perfume 2', price: 200, quantity: 20 },
+		{ name: 'Perfume 3', price: 250, quantity: 20 },
+		{ name: 'Perfume 4', price: 270, quantity: 20 },
+		{ name: 'Perfume 5', price: 250, quantity: 20 },
+		{ name: 'Sando 1', price: 120, quantity: 20 },
+		{ name: 'Sando 2', price: 220, quantity: 20 },
+		{ name: 'Sando 3', price: 130, quantity: 20 },
+		{ name: 'Sando 4', price: 140, quantity: 20 },
+		{ name: 'Sando 5', price: 520, quantity: 20 },
+		{ name: 'Toys 1', price: 720, quantity: 20 },
+		{ name: 'Toys 2', price: 220, quantity: 20 },
+		{ name: 'Toys 3', price: 1020, quantity: 20 },
+		{ name: 'Toys 4', price: 1720, quantity: 20 },
+		{ name: 'Toys 5', price: 1720, quantity: 20 },
+		{ name: 'Tshirt 1', price: 720, quantity: 20 },
+		{ name: 'Tshirt 2', price: 1000, quantity: 20 },
+		{ name: 'Tshirt 3', price: 999, quantity: 20 },
+		{ name: 'Tshirt 4', price: 220, quantity: 20 },
+		{ name: 'Tshirt 5', price: 210, quantity: 20 },
+        // Add more items with their prices and initial quantities
+    ];
+
+    let cartItems = [];
+
+    function AddtoCart(itemName, price) {
+        // Find the item in the availableItems array
+        let item = availableItems.find(i => i.name === itemName);
+        // Check if the item is available and has quantity > 0
+        if (item && item.quantity > 0) {
+            cartItems.push({ name: itemName, price });
+            // Reduce the quantity of the item in stock
+            item.quantity--;
+            updateCart();
+        } else {
+            alert('Item is out of stock!');
+        }
+    }
+
+	function restockItem(itemName, quantity) {
+    let item = availableItems.find(i => i.name === itemName);
+    if (item) {
+        item.quantity += quantity; // Increase the quantity of the item
+        updateStock(itemName, item.quantity); // Update the displayed stock
+    } else {
+        // Add the item to the availableItems if it doesn't exist
+        availableItems.push({ name: itemName, price: 0, quantity });
+        updateStock(itemName, quantity); // Update the displayed stock
+    }
+}
+
+    function updateCart() {
+        let cartList = document.getElementById('cart-items');
+        cartList.innerHTML = '';
+        cartItems.forEach(cartItem => {
+            let li = document.createElement('li');
+            li.textContent = `${cartItem.name} - ${cartItem.price} PHP`;
+            cartList.appendChild(li);
+        });
+    }
+	function updateStock(itemName, quantity) {
+    let itemElement = document.querySelector(`.product-items h5:contains(${itemName})`).parentNode;
+    let stockElement = itemElement.querySelector('.stock');
+    if (stockElement) {
+        stockElement.textContent = `Stock: ${quantity}`;
+    } else {
+        let newStockElement = document.createElement('div');
+        newStockElement.classList.add('stock');
+        newStockElement.textContent = `Stock: ${quantity}`;
+        itemElement.appendChild(newStockElement);
+    }
+}
+		{  
+		function ViewStock() { window.location.href = 'b.html';
+		}
+		}
+    function generateReceipt() {
+        let total = cartItems.reduce((acc, curr) => acc + curr.price, 0);
+        let receipt = document.getElementById('receipt');
+        receipt.innerHTML = `<p>Total: ${total} PHP</p>`;
+    }
+
+
+
+	
+
+    </script>
+
+
+
+</body>
+</html>
